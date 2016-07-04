@@ -1,0 +1,22 @@
+archivesBaseName = 'saturn-jdbc'    		
+apply plugin:'eclipse'
+dependencies {
+    compile (
+    	libraries.'commons-lang3',
+    	libraries.'logback-classic',
+    	libraries.'logback-core',
+    	libraries.'jcl-over-slf4j',
+    	libraries.'log4j-over-slf4j',
+    	libraries.'slf4j-api',
+    	libraries.'spring-beans',
+    	libraries.'sping-jdbc',
+    	libraries.'bonecp'
+    )
+}
+
+dependencies {
+   compile fileTree(dir: 'libs', include: '*.jar')
+   compile project(':saturn-util')
+}
+
+
